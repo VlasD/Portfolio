@@ -11,8 +11,6 @@
 		<link href="css/main.css" rel="stylesheet">
 
 	<body>
-
-
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
 			<div class="page-width">
 				<a class="navbar-brand" href="#" onclick="return up()">
@@ -86,7 +84,6 @@
 							</div>
 							<div class="order-form-body text-center">
 								<span class="order-form-body-price" data-form="2">14 900</span>
-								<!--                                <span class="order-form-body-oldprice" data-form="2">16 900</span>-->
 								<div class="order-form-body-litre text-center">
 									<span class="text-nowrap order-form-body-litre-text top">Выберите литраж</span>
                                     <span class="text-nowrap">
@@ -116,7 +113,6 @@
 <style type="text/css">
 	
 	html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tr,th,td,article,aside,canvas,details,embed,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
-/*body{line-height:1}*/
 ol,ul{list-style:none}
 table{border-collapse:collapse;border-spacing:0}
 caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
@@ -131,12 +127,7 @@ span{margin:35px 0 5px;font-size:26px;font-weight:normal;color:#fff}
 h2{margin:40px 0 25px;border-bottom:1px solid #bbb;padding:0 0 10px}
 p{margin:20px 0 16px}
 strong{font-weight:bold}
-label,a{
-	/*color:brown;*/
-	cursor:pointer;text-decoration:none;
-	/*font-style:italic*/
-}
-label:hover,a:hover{color:#ddd!important}
+label,a{cursor:pointer;text-decoration:none;}
 *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 label,#active,img{-moz-user-select:none;-webkit-user-select:none}
 .catch{display:block;height:0;overflow:hidden}
@@ -145,11 +136,8 @@ input{display:none}
 #slide1:checked ~ #slides .inner{margin-left:0}
 #slide2:checked ~ #slides .inner{margin-left:-100%}
 #slide3:checked ~ #slides .inner{margin-left:-200%}
-/*#slide4:checked ~ #slides .inner{margin-left:-300%}*/
-/*#slide5:checked ~ #slides .inner{margin-left:-400%}*/
 #container{width:100%;overflow:hidden}
 article img{width:100%}
-/*#slides .inner{width:500%;line-height:0}*/
 #slides .inner{width:500%}
 #slides article{width:20%;float:left}
 #commands{margin:-25% 0 0 0;width:100%;height:50px}
@@ -159,39 +147,30 @@ article img{width:100%}
 #active label{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;display:inline-block;width:10px;height:10px;background:#bbb}
 #active label:hover{background:#333;border-color:#777!important}
 
-
 #slide1:checked ~ #commands label:nth-child(2),
 #slide2:checked ~ #commands label:nth-child(3),
 #slide3:checked ~ #commands label:nth-child(1)
-/*#slide4:checked ~ #commands label:nth-child(5),*/
-/*#slide5:checked ~ #commands label:nth-child(1)*/
 {background:url('https://0.s3.envato.com/files/84450220/img/next.png') no-repeat;float:right;margin:0 12px 0 0;display:block}
 
 #slide1:checked ~ #commands label:nth-child(3),
 #slide2:checked ~ #commands label:nth-child(1),
 #slide3:checked ~ #commands label:nth-child(2)
-/*#slide4:checked ~ #commands label:nth-child(3)*/
-/*#slide5:checked ~ #commands label:nth-child(4)*/
 {background:url('https://0.s3.envato.com/files/84450220/img/previous.png') no-repeat;float:left;margin:0 0 0 -6px;display:block}
 
 #slide1:checked ~ #active label:nth-child(1),
 #slide2:checked ~ #active label:nth-child(2),
 #slide3:checked ~ #active label:nth-child(3)
-/*#slide4:checked ~ #active label:nth-child(4),*/
-/*#slide5:checked ~ #active label:nth-child(5)*/
 {background:#000;opacity:0.6;border-color:#fff!important;border:2px solid #fff}
+
 .caption{line-height:20px;margin:0 0 -150%;position:absolute;padding:320px 12px;opacity:0;color:#fff;text-transform:none;font-family:'Open Sans',Arial,Helvetica,sans-serif;text-align:left;font-size:18px}
 
 .caption bar{display:inline-block;padding:10px;background:#000;border-radius:3px 3px 3px 3px;-moz-border-radius:3px 3px 3px 3px;-webkit-border-radius:3px 3px 3px 3px;opacity:0.7;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70)}
-/*#slides{position:relative;
-	padding:2px;border:1px solid #ddd;
-	margin:45px 0 0;background:#FFF;background:-webkit-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-moz-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-ms-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-o-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);-webkit-border-radius:2px 2px 2px 2px;-moz-border-radius:2px 2px 2px 2px;border-radius:2px 2px 2px 2px;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2)}*/
 #slides .inner{-webkit-transform:translateZ(0);-webkit-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-moz-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-ms-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-o-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-webkit-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-moz-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-ms-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-o-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000)}
 #slider{-webkit-transform:translateZ(0);-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;transition:all 0.5s ease-out}
 #commands label{-webkit-transform:translateZ(0);-webkit-transition:opacity 0.2s ease-out;-moz-transition:opacity 0.2s ease-out;-o-transition:opacity 0.2s ease-out;transition:opacity 0.2s ease-out}
 #slide1:checked ~ #slides article:nth-child(1) .caption,#slide2:checked ~ #slides article:nth-child(2) .caption,#slide3:checked ~ #slides article:nth-child(3) .caption,#slide4:checked ~ #slides article:nth-child(4) .caption,#slide5:checked ~ #slides article:nth-child(5) .caption{opacity:1;-webkit-transition:all 1s ease-out 0.6s;-moz-transition:all 1s ease-out 0.6s;-o-transition:all 1s ease-out 0.6s;transition:all 1s ease-out 0.6s}
 #commands,#commands label,#slides,#active,#active label{-webkit-transform:translateZ(0);-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;transition:all 0.5s ease-out;     margin-bottom: 13px;}
-/*#slider{max-width:960px}*/
+
 @media only screen and (max-width:850px) and (min-width:450px){
   #slider #commands{margin:-25% 0 0 5%;width:90%;height:50px}
   #slider #commands label{-moz-transform:scale(0.9);-webkit-transform:scale(0.9);-o-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9)}
@@ -199,33 +178,20 @@ article img{width:100%}
   #slider #slides{padding:2px 0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
   #slider #active{margin:15% 0 0}
 }
+
 @media only screen and (max-width:450px){
-  #slider #commands{margin:0% 0 0 0%;width:100%;height:70px;
-              z-index: 5;
-            position: relative;}
-  #slider #active{    z-index: 10;
-    position: relative;
-    width: 50%;
-    margin: -10% auto;}
+  #slider #commands{margin:0% 0 0 0%;width:100%;height:70px;z-index: 5;position: relative;}
+  #slider #active{z-index: 10;position: relative;width: 50%;margin: -10% auto;}
   #slider #slides{padding:2px 0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
   #slider #slides .caption{opacity:0!important}
   #slider #commands label{-moz-transform:scale(0.7);-webkit-transform:scale(0.7);-o-transform:scale(0.7);-ms-transform:scale(0.7);transform:scale(0.7)}
 }
-/*@media only screen and (min-width:850px){
-  body{padding:0 80px}
-}*/
 
-/*article{
-	min-height: 780px;  
-}*/
-</style>
-
-		<div id="slider" tyle="    padding-top: 49px;">
+</style><div id="slider" tyle="    padding-top: 49px;">
 <input data-target="#slider" checked type='radio' name='slider' id='slide1'/>
 <input data-target="#slider"  type='radio' name='slider' id='slide2'/>
 <input data-target="#slider"  type='radio' name='slider' id='slide3'/>
-<!-- <input data-target="#slider"  type='radio' name='slider' id='slide4'/>
-<input data-target="#slider"  type='radio' name='slider' id='slide5'/> -->
+
 <div id="slides">
 	<div id="container">
 		<div class="inner">
@@ -426,27 +392,19 @@ article img{width:100%}
 		</div>
 	</div>
 </div>
+
 <div id="commands">
 	<label for='slide1'></label>
 	<label for='slide2'></label>
 	<label for='slide3'></label>
-	<!-- <label for='slide4'></label> -->
-	<!-- <label for='slide5'></label> -->
 </div>
+
 <div id="active">
 	<label for='slide1'></label>
 	<label for='slide2'></label>
 	<label for='slide3'></label>
-	<!-- <label for='slide4'></label>
-	<label for='slide5'></label> -->
 </div>
 </div>
-
-
-
-
-
-
 		<style>
 			.km_text {
 				font-weight: 600;
@@ -458,12 +416,6 @@ article img{width:100%}
 			}
 
 			.km_img > img {
-				/*position: absolute;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				top: 0;
-				margin: auto;*/
 				padding: 25px;
 			}
 
@@ -514,19 +466,7 @@ article img{width:100%}
 						</div>
 					</div>
 				</div>
-				<!--<div class="col-4 col-lg-2">
-					<div class="row text-center">
-						<div class="col-12 km_img">
-							<div class="centerme">
-								<img src="images/km/3.jpg" alt="">
-							</div>
-						</div>
-						<div class="col-12 km_text mt-2">3 червячных хомута <br>
-							для герметичного <br>
-							крепления трубки
-						</div>
-					</div>
-				</div>-->
+
 				<div class="col-4 col-lg-2">
 					<div class="row text-center">
 						<div class="col-12 km_img">
