@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="Stark">
+		<title>Самогонный аппарат Сириус</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+		<link href="css/main.css" rel="stylesheet">
+
+	<body>
+
+
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+			<div class="page-width">
+				<a class="navbar-brand" href="#" onclick="return up()">
+					<img src="images/logotype.png" alt="" class="logotype">
+					<span class="premier">siriussem.ru</span>
+					<div class="premier-mobile">siriussem.ru</div>
+					<br>
+					<span class="hide425 hideme">Серьезное оборудование для винокура</span>
+				</a>
+				<button class="navbar-toggler nvt" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse nvc mt-1" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link go" href="#char">Характеристики</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link go" href="#delivery">Доставка</a>
+						</li>
+						<li class="nav-item hide320">
+							<a class="nav-link go" href="#review">Отзывы</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link go" href="#contacts">Контакты</a>
+						</li>
+						<button type="button" class="btn btn-buy text-uppercase no-focus" data-toggle="modal" data-target="#buyIt">Заказать</button>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<a href="#" data-toggle="modal" data-target="#buyIt" class="mobile buy-btn">
+			Заказать
+		</a>
+
+		<div class="modal fade zin2" id="buyed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<button type="button" class="modal-close" style="right: 0" data-dismiss="modal">
+						<img src="images/cross.png" alt=""></button>
+					<div class="okay">
+						<div class="already">
+							<div class="header">Готово!</div>
+							<div class="body text-center">
+								Заявка принята.<br> Наш менеджер перезвонит Вам в самое ближайшее время!
+							</div>
+						</div>
+						<div class="text-center">
+							<button type="button" class="btn-back" data-dismiss="modal"> Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade zin" id="buyIt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-bg" role="document">
+				<div class="modal-content modal-content-darked">
+
+
+					<form id="sendform" class="order-form top float-md-right position-relative" method="post" enctype="multipart/form-data" action="mail.php"><!-- none box -->
+						<button type="button" class="modal-close modal-mini" data-dismiss="modal">
+							<img src="images/cross.png" alt=""></button>
+						<div>
+							<div class="order-form-header">
+								<span class="text-uppercase order-form-header-text">Закажите</span>
+								<!--<span class="text-uppercase order-form-header-date">до 20.03</span>-->
+								<div class="text-uppercase order-form-header-discount top">и получите
+									<a class="text-bold go" href="#gift" onclick="$('#buyIt').modal('hide')">3 подарка</a>
+								</div>
+							</div>
+							<div class="order-form-body text-center">
+								<span class="order-form-body-price" data-form="2">14 900</span>
+								<!--                                <span class="order-form-body-oldprice" data-form="2">16 900</span>-->
+								<div class="order-form-body-litre text-center">
+									<span class="text-nowrap order-form-body-litre-text top">Выберите литраж</span>
+                                    <span class="text-nowrap">
+                                        <button type="button" class="order-form-body-litre-button top active" data-id="1" data-form="2" data-model="20" name="20л">20&nbsp;л.</button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="2" data-form="2" data-model="25" name="25л">25&nbsp;л.</button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="3" data-form="2" data-model="30" name="30л">30&nbsp;л.</button>
+                                    </span>
+								</div>
+							</div>
+							<div>
+								<input type="hidden" name="model" default="20"/>
+								<input type="text" class="form-control order-form-footer-input" placeholder="Введите телефон" data-form="2" name="phone" required/>
+								<input type="submit" class="btn btn-block text-uppercase btn-order" data-form="2"></input>
+								<div class="text-muted text-center order-form-footer-text">
+									Чтобы получить аппарат, введите свой телефон. Специалист позвонит Вам и уточнит, куда доставить заказ
+								</div>
+							</div>
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+
+
+<style type="text/css">
+	
+	html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tr,th,td,article,aside,canvas,details,embed,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+/*body{line-height:1}*/
+ol,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+q,blockquote{quotes:none}
+q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}
+a img{border:none}
+article{display:block}
+body{overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-weight:bold;font-size:16px;margin:12px 0}
+span{margin:35px 0 5px;font-size:26px;font-weight:normal;color:#fff}
+#slider{text-align:center}
+h2{margin:40px 0 25px;border-bottom:1px solid #bbb;padding:0 0 10px}
+p{margin:20px 0 16px}
+strong{font-weight:bold}
+label,a{
+	/*color:brown;*/
+	cursor:pointer;text-decoration:none;
+	/*font-style:italic*/
+}
+label:hover,a:hover{color:#ddd!important}
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+label,#active,img{-moz-user-select:none;-webkit-user-select:none}
+.catch{display:block;height:0;overflow:hidden}
+#slider{margin:0 auto}
+input{display:none}
+#slide1:checked ~ #slides .inner{margin-left:0}
+#slide2:checked ~ #slides .inner{margin-left:-100%}
+#slide3:checked ~ #slides .inner{margin-left:-200%}
+/*#slide4:checked ~ #slides .inner{margin-left:-300%}*/
+/*#slide5:checked ~ #slides .inner{margin-left:-400%}*/
+#container{width:100%;overflow:hidden}
+article img{width:100%}
+/*#slides .inner{width:500%;line-height:0}*/
+#slides .inner{width:500%}
+#slides article{width:20%;float:left}
+#commands{margin:-25% 0 0 0;width:100%;height:50px}
+#commands label{display:none;width:80px;height:80px}
+#commands label:hover{opacity:0.8}
+#active{position:relative;z-index:5;margin:16% 0 0;text-align:center}
+#active label{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;display:inline-block;width:10px;height:10px;background:#bbb}
+#active label:hover{background:#333;border-color:#777!important}
+
+
+#slide1:checked ~ #commands label:nth-child(2),
+#slide2:checked ~ #commands label:nth-child(3),
+#slide3:checked ~ #commands label:nth-child(1)
+/*#slide4:checked ~ #commands label:nth-child(5),*/
+/*#slide5:checked ~ #commands label:nth-child(1)*/
+{background:url('https://0.s3.envato.com/files/84450220/img/next.png') no-repeat;float:right;margin:0 12px 0 0;display:block}
+
+#slide1:checked ~ #commands label:nth-child(3),
+#slide2:checked ~ #commands label:nth-child(1),
+#slide3:checked ~ #commands label:nth-child(2)
+/*#slide4:checked ~ #commands label:nth-child(3)*/
+/*#slide5:checked ~ #commands label:nth-child(4)*/
+{background:url('https://0.s3.envato.com/files/84450220/img/previous.png') no-repeat;float:left;margin:0 0 0 -6px;display:block}
+
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3)
+/*#slide4:checked ~ #active label:nth-child(4),*/
+/*#slide5:checked ~ #active label:nth-child(5)*/
+{background:#000;opacity:0.6;border-color:#fff!important;border:2px solid #fff}
+.caption{line-height:20px;margin:0 0 -150%;position:absolute;padding:320px 12px;opacity:0;color:#fff;text-transform:none;font-family:'Open Sans',Arial,Helvetica,sans-serif;text-align:left;font-size:18px}
+
+.caption bar{display:inline-block;padding:10px;background:#000;border-radius:3px 3px 3px 3px;-moz-border-radius:3px 3px 3px 3px;-webkit-border-radius:3px 3px 3px 3px;opacity:0.7;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70)}
+/*#slides{position:relative;
+	padding:2px;border:1px solid #ddd;
+	margin:45px 0 0;background:#FFF;background:-webkit-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-moz-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-ms-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:-o-linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);background:linear-gradient(#FFF,#FFF 20%,#EEE 80%,#DDD);-webkit-border-radius:2px 2px 2px 2px;-moz-border-radius:2px 2px 2px 2px;border-radius:2px 2px 2px 2px;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.2);-moz-box-shadow:0 0 3px rgba(0,0,0,0.2);box-shadow:0 0 3px rgba(0,0,0,0.2)}*/
+#slides .inner{-webkit-transform:translateZ(0);-webkit-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-moz-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-ms-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-o-transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);transition:all 800ms cubic-bezier(0.770,0.000,0.175,1.000);-webkit-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-moz-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-ms-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);-o-transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000);transition-timing-function:cubic-bezier(0.770,0.000,0.175,1.000)}
+#slider{-webkit-transform:translateZ(0);-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;transition:all 0.5s ease-out}
+#commands label{-webkit-transform:translateZ(0);-webkit-transition:opacity 0.2s ease-out;-moz-transition:opacity 0.2s ease-out;-o-transition:opacity 0.2s ease-out;transition:opacity 0.2s ease-out}
+#slide1:checked ~ #slides article:nth-child(1) .caption,#slide2:checked ~ #slides article:nth-child(2) .caption,#slide3:checked ~ #slides article:nth-child(3) .caption,#slide4:checked ~ #slides article:nth-child(4) .caption,#slide5:checked ~ #slides article:nth-child(5) .caption{opacity:1;-webkit-transition:all 1s ease-out 0.6s;-moz-transition:all 1s ease-out 0.6s;-o-transition:all 1s ease-out 0.6s;transition:all 1s ease-out 0.6s}
+#commands,#commands label,#slides,#active,#active label{-webkit-transform:translateZ(0);-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;transition:all 0.5s ease-out;     margin-bottom: 13px;}
+/*#slider{max-width:960px}*/
+@media only screen and (max-width:850px) and (min-width:450px){
+  #slider #commands{margin:-25% 0 0 5%;width:90%;height:50px}
+  #slider #commands label{-moz-transform:scale(0.9);-webkit-transform:scale(0.9);-o-transform:scale(0.9);-ms-transform:scale(0.9);transform:scale(0.9)}
+  #slider #slides .caption{padding:280px 12px}
+  #slider #slides{padding:2px 0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+  #slider #active{margin:15% 0 0}
+}
+@media only screen and (max-width:450px){
+  #slider #commands{margin:0% 0 0 0%;width:100%;height:70px;
+              z-index: 5;
+            position: relative;}
+  #slider #active{    z-index: 10;
+    position: relative;
+    width: 50%;
+    margin: -10% auto;}
+  #slider #slides{padding:2px 0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+  #slider #slides .caption{opacity:0!important}
+  #slider #commands label{-moz-transform:scale(0.7);-webkit-transform:scale(0.7);-o-transform:scale(0.7);-ms-transform:scale(0.7);transform:scale(0.7)}
+}
+/*@media only screen and (min-width:850px){
+  body{padding:0 80px}
+}*/
+
+/*article{
+	min-height: 780px;  
+}*/
+</style>
+
+		<div id="slider" tyle="    padding-top: 49px;">
+<input data-target="#slider" checked type='radio' name='slider' id='slide1'/>
+<input data-target="#slider"  type='radio' name='slider' id='slide2'/>
+<input data-target="#slider"  type='radio' name='slider' id='slide3'/>
+<!-- <input data-target="#slider"  type='radio' name='slider' id='slide4'/>
+<input data-target="#slider"  type='radio' name='slider' id='slide5'/> -->
+<div id="slides">
+	<div id="container">
+		<div class="inner">
+			<article class="background-block-1" style="background: url(images/background/1-4.jpg) 50% 80% no-repeat; background-size: cover; ">
+				<div class="container full">
+				<div class="row margin-top">
+					<div class="col-md-5 top">
+						<table class="table wow nb-table">
+							<tbody>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">100% очистка.<br/>Беспохмельный продукт</td>
+								</tr>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">Оплата после<br>
+										проверки
+									</td>
+								</tr>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">2 мм медицинская<br>
+										сталь
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-7 top">
+
+						<div class="order-form top float-md-right">
+							<form id="sendform" method="post" enctype="multipart/form-data" action="mail.php"><!-- none box -->
+								<div class="order-form-header">
+									<span class="text-uppercase order-form-header-text top">Закажите</span>
+									<!--<span class="text-uppercase order-form-header-date top">до 20.03</span>-->
+									<div class="text-uppercase order-form-header-discount top">и получите
+										<a class="text-bold go" href="#gift">3 подарка</a></div>
+								</div>
+								<div class="order-form-body text-center">
+									<span class="order-form-body-price top" data-form="1">14 900</span>
+									<!--                        <span class="order-form-body-oldprice top" data-form="1">16 900</span>-->
+									<div class="order-form-body-litre text-center">
+										<span class="text-nowrap order-form-body-litre-text top">Выберите литраж</span>
+                                    <span class="text-nowrap">
+                                        <button type="button" class="order-form-body-litre-button top " 
+                                        style="border-radius: 3px;background-color: rgb(252, 185, 39);border: none;color: #000;
+    									opacity: 1; box-shadow: 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.35), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.28);" 
+                                        data-id="1" data-form="1" data-model="20" name="20л">20&nbsp;л.</button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="2" data-form="1" data-model="25" name="25л"><label for="slide2"> 25&nbsp;л. </label></button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="3" data-form="1" data-model="30" name="30л"><label for="slide3"> 30&nbsp;л. </label></button>
+                                    </span>
+									</div>
+								</div>
+								<div class="order-form-footer">
+									<input type="hidden" name="model" default="20"/>
+									<input type="text" class="form-control order-form-footer-input top" placeholder="Введите телефон" name="phone" required/>
+									<input type="submit" class="btn top btn-block text-uppercase" data-form="1"></input>
+									<div class="text-muted text-center order-form-footer-text top">
+										Чтобы получить аппарат, введите свой телефон. Специалист позвонит Вам и уточнит, куда доставить заказ
+									</div>
+								</div>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			</article>
+
+
+			<article class="background-block-1" style="background: url(images/background/1-4.jpg) 50% 80% no-repeat; background-size: cover; ">		
+			<div class="container full">
+				<div class="row margin-top">
+					<div class="col-md-5 top">
+						<table class="table wow nb-table">
+							<tbody>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">100% очистка.<br/>Беспохмельный продукт</td>
+								</tr>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">Оплата после<br>
+										проверки
+									</td>
+								</tr>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">Another <br>
+										text 2
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-7 top">
+
+						<div class="order-form top float-md-right">
+							<form id="sendform" method="post" enctype="multipart/form-data" action="mail.php"><!-- none box -->
+								<div class="order-form-header">
+									<span class="text-uppercase order-form-header-text top">Закажите</span>
+									<!--<span class="text-uppercase order-form-header-date top">до 20.03</span>-->
+									<div class="text-uppercase order-form-header-discount top">и получите
+										<a class="text-bold go" href="#gift">3 подарка</a></div>
+								</div>
+								<div class="order-form-body text-center">
+									<span class="order-form-body-price top" data-form="1">15 900</span>
+									<!--                        <span class="order-form-body-oldprice top" data-form="1">16 900</span>-->
+									<div class="order-form-body-litre text-center">
+										<span class="text-nowrap order-form-body-litre-text top">Выберите литраж</span>
+                                    <span class="text-nowrap">
+                                        <button type="button" class="order-form-body-litre-button top " data-id="1" data-form="1" data-model="20" name="20л"><label for="slide1"> 20&nbsp;л. </label></button>
+                                        <button  type="button" class="order-form-body-litre-button top active" 
+                                        style="border-radius: 3px;    background-color: rgb(252, 185, 39);    border: none;    color: #000;    opacity: 1;    box-shadow: 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.35), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.28);" data-id="2" data-form="1" data-model="25" name="25л">25&nbsp;л.</button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="3" data-form="1" data-model="30" name="30л"><label for="slide3"> 30&nbsp;л. </label></button>
+                                    </span>
+									</div>
+								</div>
+								<div class="order-form-footer">
+									<input type="hidden" name="model" default="20"/>
+									<input type="text" class="form-control order-form-footer-input top" placeholder="Введите телефон" name="phone" required/>
+									<input type="submit" class="btn top btn-block text-uppercase" data-form="1"></input>
+									<div class="text-muted text-center order-form-footer-text top">
+										Чтобы получить аппарат, введите свой телефон. Специалист позвонит Вам и уточнит, куда доставить заказ
+									</div>
+								</div>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			</article>
+
+			<article class="background-block-1"style="background: url(images/background/1-4.jpg) 50% 80% no-repeat; background-size: cover; ">
+			<div class="container full">
+				<div class="row margin-top">
+					<div class="col-md-5 top">
+						<table class="table wow nb-table">
+							<tbody>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">100% очистка.<br/>Беспохмельный продукт</td>
+								</tr>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">Оплата после<br>
+										проверки
+									</td>
+								</tr>
+								<tr>
+									<th class="table-check"><img src="images/check.png" alt=""></th>
+									<td class="table-text">Another <br>
+										text 3
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-7 top">
+
+						<div class="order-form top float-md-right">
+							<form id="sendform" method="post" enctype="multipart/form-data" action="mail.php"><!-- none box -->
+								<div class="order-form-header">
+									<span class="text-uppercase order-form-header-text top">Закажите</span>
+									<!--<span class="text-uppercase order-form-header-date top">до 20.03</span>-->
+									<div class="text-uppercase order-form-header-discount top">и получите
+										<a class="text-bold go" href="#gift">3 подарка</a></div>
+								</div>
+								<div class="order-form-body text-center">
+									<span class="order-form-body-price top" data-form="1">17 900</span>
+									<!--                        <span class="order-form-body-oldprice top" data-form="1">16 900</span>-->
+									<div class="order-form-body-litre text-center">
+										<span class="text-nowrap order-form-body-litre-text top">Выберите литраж</span>
+                                    <span class="text-nowrap">
+                                        <button type="button" class="order-form-body-litre-button top " data-id="1" data-form="1" data-model="20" name="20л"><label for="slide1"> 20&nbsp;л. </label></button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="2" data-form="1" data-model="25" name="25л"><label for="slide2"> 25&nbsp;л. </label></button>
+                                        <button type="button" class="order-form-body-litre-button top active" 
+                                        style="border-radius: 3px;    background-color: rgb(252, 185, 39);    border: none;    color: #000;    opacity: 1;    box-shadow: 1.5px 2.598px 7px 0px rgba(0, 0, 0, 0.35), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.28);
+    									"data-id="3" data-form="1" data-model="30" name="30л">
+    									<label for="slide3"> 30&nbsp;л.</label>
+    								</button>
+                                    </span>
+									</div>
+								</div>
+								<div class="order-form-footer">
+									<input type="hidden" name="model" default="20"/>
+									<input type="text" class="form-control order-form-footer-input top" placeholder="Введите телефон" name="phone" required/>
+									<input type="submit" class="btn top btn-block text-uppercase" data-form="1"></input>
+									<div class="text-muted text-center order-form-footer-text top">
+										Чтобы получить аппарат, введите свой телефон. Специалист позвонит Вам и уточнит, куда доставить заказ
+									</div>
+								</div>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			</article>			
+		</div>
+	</div>
+</div>
+<div id="commands">
+	<label for='slide1'></label>
+	<label for='slide2'></label>
+	<label for='slide3'></label>
+	<!-- <label for='slide4'></label> -->
+	<!-- <label for='slide5'></label> -->
+</div>
+<div id="active">
+	<label for='slide1'></label>
+	<label for='slide2'></label>
+	<label for='slide3'></label>
+	<!-- <label for='slide4'></label>
+	<label for='slide5'></label> -->
+</div>
+</div>
+
+
+
+
+
+
+		<style>
+			.km_text {
+				font-weight: 600;
+				font-size: 15px;
+			}
+
+			.km_img {
+				height: 130px;
+			}
+
+			.km_img > img {
+				/*position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;*/
+				padding: 25px;
+			}
+
+			.centerme {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -45%;
+				margin: 65px 0;
+			}
+
+			.mb_km {
+				margin-bottom: 7rem;
+			}
+
+			@media (max-width: 768px) {
+				.km_text {
+					font-weight: 600;
+					font-size: 12px;
+				}
+			}
+		</style>
+
+		<div class="container mb_km">
+			<div class="block-name text-center text-uppercase mt-5 mb-5">Комплектация. Все включено!</div>
+			<div class="row mt-5 justify-content-center">
+				<div class="col-4 col-lg-2">
+					<div class="row text-center">
+						<div class="col-12 km_img">
+							<div class="centerme">
+								<img src="images/km/1.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-12 km_text mt-2">Аппарат<br>
+							«Сириус»
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-lg-2">
+					<div class="row text-center">
+						<div class="col-12 km_img">
+							<div class="centerme">
+								<img src="images/km/2.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-12 km_text mt-2">Шланг для<br>
+							охлаждения 4 м
+						</div>
+					</div>
+				</div>
+				<!--<div class="col-4 col-lg-2">
+					<div class="row text-center">
+						<div class="col-12 km_img">
+							<div class="centerme">
+								<img src="images/km/3.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-12 km_text mt-2">3 червячных хомута <br>
+							для герметичного <br>
+							крепления трубки
+						</div>
+					</div>
+				</div>-->
+				<div class="col-4 col-lg-2">
+					<div class="row text-center">
+						<div class="col-12 km_img">
+							<div class="centerme">
+								<img src="images/km/4.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-12 km_text mt-2">Руководство<br>
+							по
+							эксплуатации
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-lg-2">
+					<div class="row text-center">
+						<div class="col-12 km_img">
+							<div class="centerme">
+								<img src="images/km/5.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-12 km_text mt-2">Гарантийный <br>
+							талон на 1 год
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-lg-2">
+					<div class="row text-center">
+						<div class="col-12 km_img">
+							<div class="centerme">
+								<img src="images/km/6.jpg" alt="">
+							</div>
+						</div>
+						<div class="col-12 km_text mt-2">Коробка
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+			.gt_orderme {
+				font-weight: 400;
+				font-size: 40px;
+			}
+
+			.gt_background {
+				background-color: #f5f5f5;
+				padding: 5rem 0;
+			}
+
+			.gt_text {
+				font-weight: 600;
+				font-size: 21px;
+			}
+
+			.gt_img {
+				height: 350px;
+			}
+
+			.gt_img > img {
+				/*position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+				padding: 25px;*/
+			}
+
+			.centerme_gt {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -10%;
+				margin: 65px 0;
+			}
+
+			.mb_km {
+				margin-bottom: 7rem;
+			}
+
+			.book {
+				width: 60%;
+			}
+
+			@media (max-width: 1199px) {
+				.gt_img {
+					height: 280px;
+				}
+			}
+
+			@media (max-width: 991px) {
+				.gt_img {
+					height: 210px;
+				}
+			}
+
+			@media (max-width: 767px) {
+				.gt_img {
+					height: 170px;
+				}
+
+				.centerme_gt > img {
+					width: 200px;
+				}
+
+				.book {
+					width: auto !important;
+					height: 150px;
+				}
+			}
+
+			@media (max-width: 575px) {
+				.book {
+					height: 100px;
+				}
+			}
+		</style>
+
+		<div class="gt_background">
+			<div class="container" id="gift">
+				<div class="block-name text-center text-uppercase">
+					<span class="gt_orderme">Закажите аппарат</span> <br>
+					и получите 3 подарка!
+				</div>
+				<div class="row mt-5 justify-content-center">
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="row text-center">
+							<div class="col-12 gt_img">
+								<div class="centerme_gt">
+									<img src="images/gt/1.png" class="img-fluid" alt="">
+								</div>
+							</div>
+							<div class="col-12 gt_text mt-2">Шланг для подключения
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="row text-center">
+							<div class="col-12 gt_img">
+								<div class="centerme_gt">
+									<img src="images/gt/2.jpg" class="img-fluid book" alt="">
+								</div>
+							</div>
+							<div class="col-12 gt_text mt-2">Руководство <br>
+								по использованию
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="row text-center">
+							<div class="col-12 gt_img">
+								<div class="centerme_gt">
+									<img src="images/gt/3.png" class="img-fluid" alt="">
+								</div>
+							</div>
+							<div class="col-12 gt_text mt-2">Переходник на кран с <br>
+								универсальной муфтой
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<style>
+			.os_text-1, .os_text-2, .os_text-3 {
+				font-family: 'Fira Sans', sans-serif;
+			}
+
+			.os_text-1 {
+				font-size: 40px;
+				font-weight: bold;
+				line-height: 40px;
+			}
+
+			.os_text-2 {
+				/*margin-top: -15px;*/
+				font-size: 30px;
+				font-weight: normal;
+			}
+
+			.os_text-3 {
+				font-size: 20px;
+				font-weight: normal;
+			}
+
+			.os_text-3.slash {
+				padding-top: 50px;
+			}
+
+			.os_text-3.slash:before {
+				content: '';
+				background-color: #d02022;
+				width: 100px;
+				height: 4px;
+				position: absolute;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				margin-top: -30px;
+			}
+
+			.os_b {
+				margin-top: 70px;
+			}
+
+			@media (min-width: 993px) {
+				.h-992-hide {
+					display: none;
+				}
+			}
+
+			@media (max-width: 992px) {
+				.h-992-show {
+					display: none;
+				}
+			}
+
+			@media (max-width: 528px) {
+				.os_text-1 {
+					font-size: 29px;
+				}
+
+				.os_text-2 {
+					font-size: 22px;
+				}
+			}
+		</style>
+
+		<div class="container">
+			<div class="block-name text-center text-uppercase mt-5">особенности</div>
+			<div class="row">
+				<div class="col-12 os_b">
+					<div class="row">
+						<div class="col-lg-6 h-992-show mb-3"><img src="images/osobennosti/1.jpg" width="100%" alt="">
+						</div>
+						<div class="col-lg-6">
+							<div class="os_text-1">Высокая степень очистки.</div>
+							<div class="os_text-2">Колонна с дефлегматором</div>
+							<img class="h-992-hide" src="images/osobennosti/1.jpg" width="100%" alt="">
+							<p class="os_text-3 slash">
+								Самогонный дистиллятор «Сириус» – это уникальное решение, построенное на базе перегонного куба в виде герметично закрывающейся кастрюли с кламповым соединителем, а также полноценной ректификационной колонны пленочного типа со встроенной регулярной насадкой Панченкова.
+								<br>
+								Такая конфигурация позволяет пользователю получать высококачественный, первоклассный самогон высокой крепости и глубокой очистки без повторного перегона.
+								<br>
+								Это уникальное решение для домашнего самогоноварения позволит вам с первого перегона получить продукт крепостью до 85%, а со второго – практически чистый спирт крепостью 95%.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 os_b">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="os_text-1">Преимущества дистиллятора «Сириус»</div>
+							<div class="os_text-2">Сконструирован по современным технологиям</div>
+							<img class="h-992-hide" src="images/osobennosti/2.jpg" width="100%" alt="">
+							<p class="os_text-3 slash">
+								В первую очередь дистиллятор отличается тем, что поставляется в комплекте с перегонным кубом-кастрюлей из пищевой нержавеющей стали марки AISI 304 со встроенным сливным краном и клапаном сброса избыточного давления. Также в крышку встроен термометр, который позволяет отслеживать температуру паров внутри нее (t-кипения).
+								<br>
+								Многослойное дно толщиной 2 мм обеспечивает быстрое и равномерное распределение температуры, может использоваться на плитах всех типов. Уникальным является и способ соединения – все элементы дистиллятора соединяются между собой кламповыми хомутами, поэтому по желанию пользователь может добавлять любые узлы (диоптры, сухопарники и т.п.).
+								<br>
+							</p>
+						</div>
+						<div class="col-lg-6 h-992-show"><img src="images/osobennosti/2.jpg" width="100%" alt=""></div>
+					</div>
+				</div>
+				<div class="col-12 os_b">
+					<div class="row">
+						<div class="col-lg-6 h-992-show mb-3"><img src="images/osobennosti/3.jpg" width="100%" alt="">
+						</div>
+						<div class="col-lg-6">
+							<div class="os_text-1">Конструктивные особенности</div>
+							<div class="os_text-2">Полностью разборный аппарат</div>
+							<img class="h-992-hide" src="images/osobennosti/3.jpg" width="100%" alt="">
+							<div class="os_text-3 slash">
+
+
+								<span style="font-weight: 500;font-size: 22px">Сам дистиллятор состоит из следующих модулей:</span></br></br>
+								<ul>
+									<li>Высокая царга со встроенной насадкой Панченкова – сеткой из пищевой нержавейки, которая обеспечивает химический обмен между флегмой и спиртом</li>
+									<li>Дефлегматор для частичной конденсации и образования флегмы, которая необходима для ректификации</li>
+									<li>Арка со встроенным термометром для контроля температуры паров на выходе</li>
+									<li>Трубчатый холодильник проточного типа с высокой производительностью при минимальном расходе воды</li>
+
+									</br>
+									В совокупности все эти элементы составляют дистиллятор «Сириус», купить который в нашем магазине можно по цене производителя с гарантией качества и оперативной доставкой.
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--<div class="col-12 os_b">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="os_text-1">Продуман до мелочей</div>
+							<div class="os_text-2">Правильная форма бака</div>
+							<img class="h-992-hide" src="../images/osobennosti/4.jpg" width="100%" alt="">
+							<p class="os_text-3 slash">
+								Интернет заполнен самогонными аппаратами с дешевым вариантом перегонного куба - с плоским верхом. Газообразные пары напитка в таких кубах конденсируются на крышке и проходят в змеевик с большим затруднением. Из-за этого сильно страдает скорость перегонки - часто она не превышает 1 л/час.
+								<br><br>
+								Аппараты «Сириус» оснащаются куполообразной крышкой, эффективно направляющей спиртовые пары дальше в перегонную систему. Таким образом, конструктивно не создается никаких препятствий спиртовым парам. Помимо прочего, куполообразный бак самогонного аппарата выклядит куда более эстетически привлекательным, что также немаловажно в алковаренном творчестве!
+							</p>
+						</div>
+						<div class="col-lg-6 h-992-show"><img src="../images/osobennosti/4.jpg" width="100%" alt=""></div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<div class="background-block-5 mt-5">
+			<div class="container">
+				<div class="block-name text-center text-uppercase" style="padding: 5rem 0 5rem 0;">ПРАВИЛЬНЫЙ КУПОЛООБРАЗНЫЙ БАК</div>
+				<div class="row mt-4 dome-center">
+					<div class="col-12 col-md-6 dome-border">
+						<img class="ml-4" src="images/dome/wrong_dome.png">
+						<p class="ml-4 dome-text"><span>Старый бак<br/>других аппаратов</span><br/>(узкое горло)</p>
+						<!--<div class="dome-img-wrap mt-4">
+							<img src="images/dome/wrong_dome_pattern.png">
+							<p class="dome-bottom-text mt-4">70% паров не могут выйти из бака</p>
+						</div>-->
+					</div>
+					<div class="col-12 col-md-6">
+						<img class="ml-4" src="images/dome/right_dome.png">
+						<p class="ml-4 dome-text"><span>Новый бак<br/>НАШЕГО АППАРАТА «Сириус»</span><br/>(куб-кастрюля)
+						</p>
+						<!--<div class="dome-img-wrap mt-4">
+							<img src="images/dome/right_dome_pattern.png">
+							<p class="dome-bottom-text mt-4">Пары легко покидают бак</p>
+						</div>-->
+					</div>
+					<div class="col-md-12 dome-bottom mt-4 pl-5 pr-5 pt-4 pb-2">
+						<p>Интернет заполнен самогонными аппаратами с дешевым вариантом перегонного куба с узким горлом. Газообразные пары напитка в таких кубах конденсируются на крышке и проходят в змеевик с большим затруднением. Из-за этого сильно страдает скорость перегонки - часто она не превышает 1 л/час. Так же узкое горло препятствует полноценному мытью аппарата после перегонки.</p>
+						<p>Дистилляторы «Сириус» оснащаются новым кубом кастрюлей, наличие многослойного дна, обеспечивающего быстрый и равномерный прогрев браги на плитах всех типов, а также чуткую реакцию на изменения в температурном режиме. Еще одно преимущество – клапан сброса избыточного давления, который делает эксплуатацию максимально безопасной и эффективной. Крышка фиксируется специальным хомутом, а для установки колонны предусмотрен кламп. Кастрюля оснащена термометром и краном для слива. Помимо прочего, бак можно использовать как кастрюлю в быту, новый куб выглядит куда более эстетически привлекательным, что также немаловажно в творчестве самогоноварения!</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<style>
+			.ch_lt {
+				font-family: 'Fira Sans', sans-serif;
+				font-size: 25px;
+				font-weight: 800;
+			}
+
+			.order-form-body-litre.additional {
+				margin: -10px -10px -5px -10px !important;
+			}
+
+			.ch_brt:after {
+				content: '';
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+				width: 100%;
+				margin: 4px 15px;
+			}
+
+			.background-block-2 {
+				/*margin-top: 100px;*/
+				/* margin-top: 40px; */
+				padding-top: 20px;
+				background: url(images/background/2-2.jpg) repeat-y top center;
+				min-height: 884px;
+				color: white;
+			}
+
+			@media (max-width: 395px) {
+				.background-block-2 {
+					min-height: 970px;
+				}
+		</style>
+
+		<div class="background-block-2 bg-blacked" id="char">
+			<div class="container">
+				<div class="block-name bg-darked text-center text-uppercase pt-3">характеристики <br>
+					Сириус
+				</div>
+				<form id="sendform" method="post" enctype="multipart/form-data" action="mail.php"><!-- none box -->
+					<div class="order-form middle float-right">
+						<!--            <div class="logotype-double"></div>-->
+						<div class="order-form-body-litre additional text-center">
+							<span class="text-nowrap order-form-body-litre-text top">Выберите литраж</span>
+                                    <span class="text-nowrap">
+                                        <button type="button" class="order-form-body-litre-button top active" data-id="1" data-form="3" data-model="20" name="20л">20&nbsp;л.</button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="2" data-form="3" data-model="25" name="25л">25&nbsp;л.</button>
+                                        <button type="button" class="order-form-body-litre-button top" data-id="3" data-form="3" data-model="30" name="30л">30&nbsp;л.</button>
+                                    </span>
+						</div>
+						<div class="order-form-hr"></div>
+						<div class="row ch_brt">
+							<div class="col-6">Высота в сборе</div>
+							<div class="col-6 text-right text-bold s-height" data-form="3">107 см.</div>
+						</div>
+						<!-- <div class="row ch_brt">
+							 <div class="col-6">Вес</div>
+							 <div class="col-6 text-right text-bold s-weight" data-form="3">4 кг</div>
+						 </div>-->
+						<div class="row ch_brt">
+							<div class="col-6">Диаметр бака</div>
+							<div class="col-6 text-right text-bold s-tankDiameter" data-form="3">28 см.</div>
+						</div>
+						<!--<div class="row ch_brt">
+							<div class="col-7"><span style="font-size: 25px; line-height: 15px; font-weight: 600;">⌀</span> горловины (фланец)</div>
+							<div class="col-5 text-right text-bold s-throatDiameter" data-form="3">12 см.</div>
+						</div>-->
+						<div class="row ch_brt">
+							<div class="col-6">Производительность</div>
+							<div class="col-6 text-right text-bold s-performance" data-form="3">1-3 л/час</div>
+						</div>
+						<div class="row ch_brt">
+							<div class="col-8">Толщина конструкции</div>
+							<div class="col-4 text-right text-bold s-thickness" data-form="3">1 мм.</div>
+						</div>
+						<div class="row ch_brt">
+							<div class="col-5">Толщина дна</div>
+							<div class="col-7 text-right text-bold s-thicknessBottom" data-form="3">2 мм. Антипригарное</div>
+						</div>
+						<div class="row ch_brt">
+							<div class="col-4">Для плит</div>
+							<div class="col-8 text-right text-bold s-for" data-form="3">Газ, керамика, электро, индукция</div>
+						</div>
+						<div class="row">
+							<div class="col-6">Марка стали</div>
+							<div class="col-6 text-right text-bold s-steel" data-form="3">AISI 304 (медицинская)</div>
+						</div>
+						<div class="order-form-body text-center">
+							<span class="order-form-body-price" data-form="3">14 900</span>
+							<!--                <span class="order-form-body-oldprice" data-form="3">16 900</span>-->
+						</div>
+						<div class="order-form-footer">
+							<input type="hidden" name="model" default="20"/>
+							<input type="text" class="form-control order-form-footer-input no-focus" placeholder="Введите телефон" data-form="3" name="phone" required/>
+							<input type="submit" class="btn btn-block text-uppercase no-focus" data-form="3"></input>
+							<div class="text-muted text-center order-form-footer-text">
+								Чтобы получить аппарат, введите свой телефон. Специалист позвонит Вам и уточнит, куда доставить заказ
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<style>
+			.btn-ds_pay > img {
+				width: 42px;
+			}
+
+			.btn-ds_pay, .btn-ds_pay:focus, .btn-ds_pay:active {
+				text-transform: uppercase;
+				margin-top: 10px;
+				border-radius: 3px;
+				background-image: -moz-linear-gradient(90deg, rgb(200, 34, 25) 0%, rgb(226, 88, 40) 100%);
+				background-image: -webkit-linear-gradient(90deg, rgb(200, 34, 25) 0%, rgb(226, 88, 40) 100%);
+				background-image: -ms-linear-gradient(90deg, rgb(200, 34, 25) 0%, rgb(226, 88, 40) 100%);
+				color: white;
+				font-family: Fira Sans, sans-serif;
+				font-weight: 500;
+				font-size: 22px;
+				padding: 15px 25px;
+				transition: 0.5s;
+				outline: none;
+			}
+
+			.btn-ds_pay:hover {
+				color: #fff;
+				background-image: -moz-linear-gradient(90deg, rgb(200, 34, 25) 0%, rgb(255, 131, 82) 100%);
+				background-image: -webkit-linear-gradient(90deg, rgb(200, 34, 25) 0%, rgb(255, 131, 82) 100%);
+				background-image: -ms-linear-gradient(90deg, rgb(200, 34, 25) 0%, rgb(226, 88, 40) 100%);
+				cursor: pointer;
+				box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.46), inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
+				transition: 0.2s;
+				outline: none;
+			}
+
+			.btn-ds_pay.green {
+				background-image: -moz-linear-gradient(90deg, rgb(71, 165, 66) 0%, rgb(72, 176, 66) 100%);
+				background-image: -webkit-linear-gradient(90deg, rgb(71, 165, 66) 0%, rgb(72, 176, 66) 100%);
+				background-image: -ms-linear-gradient(90deg, rgb(71, 165, 66) 0%, rgb(72, 176, 66) 100%);
+				transition: 0.2s;
+			}
+
+			.btn-ds_pay.green:hover {
+				color: #fff;
+				background-image: -moz-linear-gradient(90deg, rgb(71, 165, 66) 0%, rgb(80, 203, 74) 100%);
+				background-image: -webkit-linear-gradient(90deg, rgb(71, 165, 66) 0%, rgb(80, 203, 74) 100%);
+				background-image: -ms-linear-gradient(90deg, rgb(71, 165, 66) 0%, rgb(80, 203, 74) 100%);
+				cursor: pointer;
+				box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.46), inset 0px -3px 0px 0px rgba(0, 0, 0, 0.19);
+				transition: 0.2s;
+				outline: none;
+			}
+
+			.ds_mr {
+				text-align: center;
+				padding: 40px;
+				font-family: 'Fira Sans', sans-serif;
+				font-size: 21px;
+			}
+
+			.ds_mdl {
+				text-align: left;
+				margin: 15px;
+			}
+		</style>
+
+		<div class="container mb-5" id="delivery">
+			<div class="block-name text-center text-uppercase pt-5">Доставка и оплата</div>
+			<!-- <div class="block-sub-name pt-1 text-center mb-5">При заказе 19.03 доставка бесплатно!</div> -->
+			<div class="row justify-content-center">
+				<!--         <div class="col-md-3">
+							<div class="delivery text-center">
+								<img src="../images/delivery/spb.jpg" class="img-fluid delivery-img" alt="">
+								<div class="delivery-city text-uppercase mt-4">
+									С-Петербург
+								</div>
+								<div class="delivery-text mt-3">
+									Доставка в течение 1 дня<br>
+									до квартиры.
+								</div>
+								<div class="delivery-more mt-4">
+									<a href="#" class="no-focus" data-toggle="modal" data-target="#spb">Адрес склада Спб</a>
+								</div>
+								<div class="modal fade" id="spb" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-xl" role="document">
+										<div class="modal-content">
+											<div>
+												<div class="row">
+													<div class="col-12">
+														<button type="button" class="modal-close" data-dismiss="modal"><img src="../images/cross.png" alt=""></button>
+														<!- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8cacf502b311d718e7ab3b826a5caa51cddae491b5786043b43dcd0e91ab595e&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+														->
+															<div id="map-spb" class="map-move"></div>
+														<div class="modal-body">
+															Адрес склада: г. Санкт-Петербург, Полтавский проезд, д.4 (Невский проспект, д.85БЖ)
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+				<div class="col-md-3">
+					<div class="delivery text-center">
+						<img src="images/delivery/moscow.jpg" class="img-fluid delivery-img" alt="">
+						<div class="delivery-city text-uppercase mt-4">
+							Москва
+						</div>
+						<div class="delivery-text mt-3">
+							Доставка в течение 1 дня<br>
+							до квартиры.
+						</div>
+						<div class="delivery-more mt-4">
+							<a href="#" class="no-focus" data-toggle="modal" data-target="#moscow">Россия, Москва, Сокольническая площадь, 9</a>
+						</div>
+						<div class="modal fade" id="moscow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog modal-xl" role="document">
+								<div class="modal-content">
+									<div>
+										<div class="row">
+											<div class="col-12">
+
+												<!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8cacf502b311d718e7ab3b826a5caa51cddae491b5786043b43dcd0e91ab595e&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>-->
+												<div id="map-msk" class="map-move position-relative">
+													<button type="button" class="modal-close" data-dismiss="modal">
+														<img src="images/cross.png" alt=""></button>
+												</div>
+												<div class="modal-body">
+													Адрес склада: Россия, Москва, Сокольническая площадь, 9
+													<hr>
+													ВНИМАНИЕ! Заказ на пункте выдачи Вы сможете получить,
+													<strong>ТОЛЬКО</strong> предварительно оформив его на сайте!
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="delivery text-center">
+						<img src="images/delivery/cities.jpg" class="img-fluid delivery-img" alt="">
+						<div class="delivery-city text-uppercase mt-4">
+							ДОСТАВКА В ГОРОДА
+						</div>
+						<div class="delivery-text mt-3">
+							Доставка транспортной
+							компанией 3-6 дней
+							с правом вскрытия.
+						</div>
+						<div class="delivery-more daily mt-4">
+							3 - 6 дней.
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="delivery text-center">
+						<img src="images/delivery/other.jpg" class="img-fluid delivery-img" alt="">
+						<div class="delivery-city text-uppercase mt-4">
+							УДАЛЕННЫЕ ПУНКТЫ
+						</div>
+						<div class="delivery-text mt-3">
+							Доставка Почтой РФ,<br>
+							оплата на Почте
+						</div>
+						<div class="delivery-more daily mt-4">
+							7 - 14 дней.
+						</div>
+					</div>
+				</div>
+				<!--<div class="col-12 text-center">
+					<img src="images/delivery/delivery_white.jpg" class="img-fluid delivery-img2 mt-5" alt="">
+					<div class="delivery-img2 text">
+						Перед оплатой Вы имеете право вскрыть посылку.<br>
+						Мы гарантируем, что Вы получите то, что видите на сайте.
+					</div>
+					<div class="delivery-help">
+						Перед оплатой Вы имеете право вскрыть посылку.<br>
+						Мы гарантируем, что Вы получите то, что видите на сайте.
+					</div>
+				</div>-->
+			</div>
+			<!--<div class="ds_mr">
+				Вы можете оплатить товар картой на данном сайте!<br>
+				<a href="#" class="no-focus btn btn-ds_pay" data-toggle="modal" data-target="#pay">
+					<img src="../images/pay.svg" alt=""> Оплатить картой
+				</a>
+				<div class="modal fade" id="pay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-xl" role="document">
+						<div class="modal-content">
+							<div>
+								<div class="row">
+									<div class="col-12">
+										<button type="button" class="modal-close" data-dismiss="modal"><img src="../images/cross.png" alt=""></button>
+										<h4 class="ds_mdl">Оплата картой</h4>
+										<div class="modal-body">
+											<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=410011927424376&quickpay=shop&payment-type-choice=on&writer=seller&targets=%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B0+%D0%B4%D0%B8%D1%81%D1%82%D0%B8%D0%BB%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0&targets-hint=&default-sum=&button-text=01&phone=on&successURL=http%3A%2F%2Fluxstahl.ru%2F" width="450" height="198"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
+
+		<div class="background-block-3">
+			<div class="container">
+				<div class="block-name text-center text-uppercase pt-5 mb-5">Часто задаваемые вопросы</div>
+				<div class="questions panel-group" id="questions">
+					<div class="question panel panel-default">
+						<div class="expand"></div>
+						<div data-toggle="collapse" data-parent="#questions" data-target=".question-answer-1" class="question-text collapsed" aria-expanded="false">Законно ли гнать самогон?
+						</div>
+						<div class="question-answer-1 question-answer collapse" aria-expanded="false" style="height: 67px;">В РФ разрешено самогоноварение для собственных нужд. С 1999 года все административные и уголовные статьи
+							за самогоноварение были упразднены. Однако если Вы хотите продавать самогон, следует приобретать
+							специальную лицензию и платить акциз государству!
+						</div>
+					</div>
+					<div class="question panel panel-default">
+						<div class="expand"></div>
+						<div data-toggle="collapse" data-parent="#questions" data-target=".question-answer-2" class="question-text collapsed" aria-expanded="false">Что лучше, самогон (дистилляты) или водка (чистый спирт-ректификат)?
+						</div>
+						<div class="question-answer question-answer-2 collapse" aria-expanded="false">На этот вопрос лучше всего ответит главный токсиколог страны в этом видео.<br>
+							<div class="movie">
+								<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yVUWN1PSobA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="question panel panel-default ">
+						<div class="expand"></div>
+						<div data-toggle="collapse" data-parent="#questions" data-target=".question-answer-3" class="question-text collapsed" aria-expanded="false">Может ли аппарат взорваться?
+						</div>
+						<div class="question-answer question-answer-3 collapse" aria-expanded="false">Аппарат Сириус имеет 3-ступенчатую защиту от взрыва. Во-первых, толстостенную конструкцию. Во-вторых, жесткие царгу и другие детали из нержавеющей стали с широким диаметром, которые принципиально не могут забиться из-за большого диаметра или перегнуться. В-третьих куб имеет клапан сброса избыточного давления, который делает эксплуатацию максимально безопасной и эффективной. Таким образом, аппарат Сириус полностью безопасен для домашнего применения на кухне.</div>
+					</div>
+					<div class="question panel panel-default ">
+						<div class="expand"></div>
+						<div data-toggle="collapse" data-parent="#questions" data-target=".question-answer-4" class="question-text collapsed" aria-expanded="false">Не обманут ли меня при заказе в интернет магазине?
+						</div>
+						<div class="question-answer question-answer-4 collapse" aria-expanded="false">Пока аппарат не будет в Ваших руках, Вы ничего не будете оплачивать. Мы не взимаем предоплаты. Более
+							того, если аппарат отправлен Вам курьерской компанией, перед оплатой Вы имеете право вскрыть посылку
+							и убедиться, что заказ пришёл в целости и сохранности. Кроме всего прочего, мы заботимся о своей
+							репутации в Интернете и Ваши положительные отзывы - самое ценное для нас. Поэтому Вы 100% получите
+							именно то, что заказываете на сайте.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="over hide320">
+			<div class="container reviews" id="review" style="min-height: 1100px;">
+				<div class="block-name text-center text-uppercase mt-5 mb-5">Отзывы наших покупателей</div>
+				<div class="carousel">
+					<div class="carousel-cell">
+						<div class="text-center">
+							<img src="images/reviews/otziv_1.jpg" alt="">
+							<div class="review">
+								<div class="review-name">
+									Петр Лысецкий
+								</div>
+								<div class="review-city text-muted">
+									г. Севастополь
+								</div>
+								<div class="review-description">
+									Наконец-то решил проблему, куда девать мамино и тёщино варенье и компоты! Все приелось, выкидывать жалко и родителей обижать неудобно - постоянно снабжают нас «гостинцами». Теперь все идет в дело…
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="text-center">
+							<img src="images/reviews/otziv_4.jpg" alt="">
+							<div class="review">
+								<div class="review-name">
+									Светлана Федорова
+								</div>
+								<div class="review-city text-muted">
+									г. Ярославль
+								</div>
+								<div class="review-description">
+									Устали с супругом от городской суеты, переехали за город в свой дом. Теперь стараемся кушать свои овощи, ягоды, мясо, поменьше покупать непроверенного. Ну и как же без самогонного аппарата! Выбрали «Сириус»!
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="text-center">
+							<img src="images/reviews/otziv_2.jpg" alt="">
+							<div class="review">
+								<div class="review-name">
+									Василий Писченко
+								</div>
+								<div class="review-city text-muted">
+									г. *город*
+								</div>
+								<div class="review-description">
+									Выбирал в интернете долго. Все аппараты вроде одинаковые! У «Сириус» понравился очень длинный носик выхода продукта. Это очень удобно, потому что я шланги не люблю, неэстетично это все. Короче, пользуюсь - доволен!
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="text-center">
+							<img src="images/reviews/otziv_3.jpg" alt="">
+							<div class="review">
+								<div class="review-name">
+									Сергей Ветошкин
+								</div>
+								<div class="review-city text-muted">
+									с. Подосиновец, Кировская обл.
+								</div>
+								<div class="review-description">
+									Пользовался самодельным аппаратом с сухопарником, из банки. Но запах у продукта устранить никак не удавалось. У «Сириус» инженерное решение в конструкции сухопарника очень классное, продукт по аромату сейчас значительно приятнее!
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reviews-bg"></div>
+			</div>
+		</div>
+
+
+		<div class="background-block-4 bg-blacked" id="contacts">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<form method="post" enctype="multipart/form-data" action="mail.php"><!-- none box -->
+							<div class="answer">
+								<div class="head">
+									остались вопросы?
+								</div>
+								<div class="body">
+									Если у Вас остались вопросы, задайте их нашему менеджеру. Мы обязательно прокунсультруем Вас
+									в ближайшее время!
+								</div>
+								<div class="footer">
+									<input type="text" id="quephone" placeholder="Введите телефон" class="form-control mt-3 no-focus" name="phone"/>
+									<textarea id="que" rows="8" class="no-focus mt-3" placeholder="Введите Ваш вопрос" name="vopros:"></textarea>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<input type="submit"></input>
+									</div>
+									<div class="col-sm-6">
+										<span class="answer-or">Или позвоните по номеру</span>
+										<a href="tel:8(952) 310-96-76" class="call inverse">
+											<div class="answer-tel">8 (952) 310-96-76</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="footer">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="images/logotype-dark.png" alt="">
+						<span class="premier-bottom">siriussem.ru</span>
+						<div class="footer-text font-italic">
+							Серьезный аппарат для винокура<br>
+							от российского производителя
+						</div>
+					</div>
+					<div class="col-md-6 text-md-right hide425">
+						<a href="tel:8(952) 310-96-76" class="call">
+							<div class="footer-tel">
+								<span class="yellow"></span> 8(952) 310-96-76
+							</div>
+						</a>
+						<div class="footer-text tel">Круглосуточный прием заявок по всей России</div>
+					</div>
+					<!--<div class="col-12 text-center footer-data">
+						Фабрика домашних дистилляторов <br /> ООО "БУТСЕРВИС" ИНН 000000000 ОГРН 111111111111<br>
+						<a href="#" class="policy no-focus" data-toggle="modal" data-target="#policy">Политика конфиденциальности</a>
+					</div>-->
+					<div class="modal fade" id="policy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-xl" role="document">
+							<div class="modal-content">
+								<div>
+									<div class="row">
+										<div class="col-12 pr-5 pl-5 pb-4">
+											<button type="button" class="modal-close" data-dismiss="modal">
+												<img src="images/cross.png" alt=""></button>
+											<div class="modal-head" style="padding-left: 15px;">Политика конфиденциальности</div>
+											<div class="modal-body">
+												Ваша конфиденциальность очень важна для нас. Мы хотим, чтобы Ваша работа в Интернет по возможности была максимально приятной и полезной, и Вы совершенно спокойно использовали широчайший спектр информации, инструментов и возможностей, которые предлагает Интернет.
+												<br><br>Личная информация, собранная при регистрации (или в любое другое время) преимущественно используется для подготовки Продуктов или Услуг в соответствии с Вашими потребностями. Ваша информация не будет передана или продана третьим сторонам.
+												<br><br>Какие данные собираются на сайте:
+												<br>При добровольной отправки заявки на приобретении дистиллятора Сириус-Премьер, Вы отправляете свое Имя и Телефон через форму регистрации.
+												<br><br>С какой целью собираются эти данные:
+												<br>Имя используется для обращения лично к Вам, а ваш Телефон для связи с Вами, для дальнейшего уточнения координат, по которым мы вышлем Вам Ваш заказ, для дальнейшего его осмотра и приобретения. Также телефон может быть использован для sms-информирования о новостях компании и акциях.
+												<br><br>Ваши имя и Телефон не передаются третьим лицам, ни при каких условиях кроме случаев, связанных с исполнением требований законодательства.
+												<br><br>Для защиты Вашей личной информации мы используем разнообразные административные, управленческие и технические меры безопасности. Наша Компания придерживается различных международных стандартов контроля, направленных на операции с личной информацией, которые включают определенные меры контроля по защите информации, собранной в Интернет.
+												<br><br>Наших сотрудников обучают понимать и выполнять эти меры контроля, они ознакомлены с нашим Уведомлением о конфиденциальности, нормами и инструкциями.
+												<br><br>Тем не менее, несмотря на то, что мы стремимся обезопасить Вашу личную информацию, Вы тоже должны принимать меры, чтобы защитить ее.
+												<br><br>Мы настоятельно рекомендуем Вам принимать все возможные меры предосторожности во время пребывания в Интернете. Организованные нами услуги и веб-сайты предусматривают меры по защите от утечки, несанкционированного использования и изменения информации, которую мы контролируем. Несмотря на то, что мы делаем все возможное, чтобы обеспечить целостность и безопасность своей сети и систем, мы не можем гарантировать, что наши меры безопасности предотвратят незаконный доступ к этой информации хакеров сторонних организаций.
+												<br><br>В случае изменения данной политики конфиденциальности Вы сможете прочитать об этих изменениях на этой странице или, в особых случаях, получить уведомление по Телефону.
+												<br><br>Для связи с администратором сайта по любым вопросам вы можете написать письмо на e-mail: info@apparatlux.ru.
+											</div>
+											<button type="button" class="btn-back" data-dismiss="modal">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													xmlns:xlink="http://www.w3.org/1999/xlink"
+													width="0.811cm" height="0.247cm">
+													<path fill-rule="evenodd" fill="rgb(87, 87, 87)"
+													      d="M23.000,4.000 L2.582,4.000 L4.999,6.171 L3.977,7.005 L3.977,7.005 L0.000,3.433 L3.956,-0.005 L4.961,0.842 L2.481,3.000 L23.000,3.000 L23.000,4.000 Z"/>
+												</svg>
+												Назад
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		        crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="js/userflow.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+		</script>
+		<script src="js/maps.js"></script>
+<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+<script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=e562f9b4f62f0d56b3d67df792fc4527" charset="UTF-8" async></script>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48212867 = new Ya.Metrika({
+                    id:48212867,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48212867" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+	</body>
+</html>
